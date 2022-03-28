@@ -11,6 +11,11 @@ class SiteController extends Controller
     }
 
     public function about() {
-        return view('about'); //about.blade.php
+        $company = 'CCT';
+        $users = ['John', 'Mary', 'Bob'];
+        return view('about', [
+            'company' => $company,
+            'users' => $users
+        ]);
     }
 }
